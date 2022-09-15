@@ -42,8 +42,8 @@ Log Analysis
 
 -->
 
-## 14 September 2022
-{: #cvad-sep1422}
+## 15 September 2022
+{: #cvad-sep1522}
 {: release-note}
 
 Rebranding

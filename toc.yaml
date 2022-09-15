@@ -20,6 +20,7 @@ toc:
       - getting-started.md
       - about.md
       - product-compatibility-guide.md
+      - release-notes.md
 
   - navgroup:
      id: howto
