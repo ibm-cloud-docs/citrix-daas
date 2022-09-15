@@ -1,0 +1,79 @@
+---
+toc:
+  properties:
+    subcollection: citrix-daas
+    version: 2
+    category: compute
+    audience: service
+    href: /docs/citrix-daas?topic=citrix-daas-getting-started-tutorial
+    console-page: "/classic"
+    product-page: "https://www.ibm.com/cloud/citrix-daas"
+    path: citrix-daas
+    label: Citrix Daas for IBM Cloud
+
+#  List your getting started tutorial (getting-started.md) as the first item in the Get started nav group. See https://test.cloud.ibm.com/docs/writing?topic=writing-navigation for more details on the toc design.
+  entries:
+
+  - navgroup:
+     id: learn
+     topics:
+      - getting-started.md
+      - about.md
+      - product-compatibility-guide.md
+
+  - navgroup:
+     id: howto
+     topics:
+     - topicgroup:
+        label: Provisioning steps
+        topics:
+          - provisioning-cvad.md
+          - provisioning-cvad-vpc.md
+
+
+     - topicgroup:
+        label: Post-provisioning steps
+        topics:
+          - post-provisioning.md
+          - post-provisioning-vmware.md
+          - post-provisioning-vpc.md
+
+     - topicgroup:
+        label: Configuring
+        topics: 
+          - configure-high-availability.md
+          - configure-backup.md
+          - configure-monitoring.md
+
+     - topicgroup:
+        label: Managing servers
+        topics:
+          - order-bm-servers.md
+          - cancel-bm-servers.md
+
+     - topicgroup:
+        label: Managing networks
+        topics: 
+          - order-networks-vms.md
+          - modify-network-speed.md
+
+     - topicgroup:
+        label: Managing storage
+        topics:
+          - order-more-storage.md
+          - order-more-storage-vmware.md
+          - modify-capacity-iops-storage.md
+
+     - topicgroup:
+        label: Managing Resources
+        topics: 
+          - manage-resources-view.md
+          - manage-resources-delete.md
+
+  - navgroup:
+      id: help
+      topics:
+      - faqs.md
+      - troubleshooting.md
+      - troubleshooting-vpc.md
+      - getting-help.md
