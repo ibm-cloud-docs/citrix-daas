@@ -10,8 +10,6 @@ subcollection: cvad
 
 content-type: release-note
 
-{:release-note: data-hd-content-type='release-note'}
-
 ---
 
 <!-- keywords values above are place holders. Actual values should be pulled from the release notes entries. -->
@@ -29,8 +27,6 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: shortdesc}
 
 
-## July 2021
-{: #subcollection-jul21}
 
 <!-- placeholder
 ### 29 July 2022
