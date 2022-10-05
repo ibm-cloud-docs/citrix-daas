@@ -23,6 +23,9 @@ subcollection: citrix-daas
 # Getting started with {{site.data.keyword.cvad_full_notm}} 
 {: #getting-started-tutorial}
 
+Citrix Virtual Apps and Desktops on IBM Cloud;reg; is now {{site.data.keyword.cvad_full}}. If you are using bookmarks to access the documentation, you should update them to the new product name path.
+{: note}
+
 Use {{site.data.keyword.cvad_full}} to create a dedicated {{site.data.keyword.cvad_short}} service environment at any of our global data centers. You have the option of creating a Classic solution, VMWare solution, or VPC solution. 
 {: shortdesc}
 

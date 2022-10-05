@@ -44,6 +44,8 @@ Log Analysis
 
 Rebranding
 :   This is the initial release of the rebranded {{site.data.keyword.cvad_full_notm}}, formerly Citrix Virtual Apps and Desktops on IBM Cloud;reg;. 
+:   If you are using bookmarks to access the documentation, you should update them to the new product name path.
+
 
 ## 25 August 2022
 {: #cvad-aug2522}
