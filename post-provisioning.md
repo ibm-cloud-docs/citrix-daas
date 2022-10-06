@@ -21,7 +21,7 @@ subcollection: citrix-daas
 {:table: .aria-labeledby="caption"}
 
 # Post-provisioning steps for Citrix Hypervisor  
-{: #post-provisioning-citrix-daas} 
+{: #post-provisioning-cvad} 
 
 After you provision your {{site.data.keyword.cvad_full}} ({{site.data.keyword.cvad_short}}) with the Citrix Hypervisor (formerly known as XenServer), complete the following tasks:
 
@@ -65,7 +65,7 @@ Complete the following steps to identify and view your File Storage details.
 
 Optionally, you can provision a virtual server instance with a Windows operating system to manage your {{site.data.keyword.cvad_full_notm}}. You can use a jump server to start a Remote Desktop session to access the Active Directory server and Citrix Cloud Connectors. The jump server is also needed to start the XenCenter management interface. You can order a Windows virtual server instance through the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/gen1/infrastructure/provision/vs?cm_sp=Cloud-Product-_-OnPageNav-IBMCloudPlatform_IBMVirtualMachines-_-VSI_Prod_Midpage){: external}.
 
-You must provision the virtual server instance with the same [network details](/docs/citrix-daas?topic=citrix-daas-post-provisioning-citrix-daas#view-network-details) as the other service components that are attached to the resource location.
+You must provision the virtual server instance with the same [network details](/docs/citrix-daas?topic=citrix-daas-post-provisioning-cvad#view-network-details) as the other service components that are attached to the resource location.
 {: important}
 
 ## Step 3. Establish network connectivity for Active Directory Topology
@@ -85,7 +85,7 @@ If you chose **IBM Cloud** Active Directory topology and are using the Active Di
    
    You must set up another Gateway appliance on-premises too. Configure both the appliances and establish network connectivity between the two sites.
 
-   When you order a gateway appliance from {{site.data.keyword.cloud_notm}}, the data center and backend VLAN must correspond to the same data center and VLAN where your other services are provisioned. See [View network details](/docs/citrix-daas?topic=citrix-daas-post-provisioning-citrix-daas#view-network-details).
+   When you order a gateway appliance from {{site.data.keyword.cloud_notm}}, the data center and backend VLAN must correspond to the same data center and VLAN where your other services are provisioned. See [View network details](/docs/citrix-daas?topic=citrix-daas-post-provisioning-cvad#view-network-details).
    {: important}
 
 2. Install the domain controller in {{site.data.keyword.cloud_notm}}  

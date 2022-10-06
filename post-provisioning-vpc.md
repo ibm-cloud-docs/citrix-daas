@@ -22,7 +22,7 @@ subcollection: citrix-daas
 {:table: .aria-labeledby="caption"}
 
 # Post-provisioning steps for {{site.data.keyword.cvad_full_notm}} on Virtual Private Cloud
-{: #post-provisioning-citrix-daas-vpc}
+{: #post-provisioning-cvad-vpc}
 
 After you provision your {{site.data.keyword.cvad_full}} ({{site.data.keyword.cvad_short}}) with the Virtual Private Cloud (VPC), complete the following tasks:
 
@@ -126,7 +126,7 @@ If you do not have an existing master image, you can create a master image now.
 11.  Select the **Create a Machine Catalog**. Make sure you select the proper Active Directory. You need your Active Directory password that was decrypted earlier. An example of a username is: youraddomain\Administrator. Select the Custom Image Virtual Machine boot volume that you provisioned under volumes and the resource group for your VPC.
 
 ## Step 5: Customizing {{site.data.keyword.la_full_notm}} (Optional)
-{: #citrix-daas-post-prov-vpc-logging}
+{: #cvad-post-prov-vpc-logging}
 
 You can define alerts and design custom views to monitor application and system logs  with{{site.data.keyword.la_full_notm}}. For more information, see [Getting Started](/docs/log-analysis?topic=log-analysis-getting-started#getting-started).
 
@@ -142,7 +142,7 @@ If you selected br-sao, ca-tor, or jp-oas as your deployment region you must als
 For more information, see (Configuring IBM Cloud platform logs([/docs/log-analysis?topic=log-analysis-config_svc_logs]).
 
 ## Next steps
-{: #citrix-daas-post-prov-vpc-next}
+{: #cvad-post-prov-vpc-next}
 
 After you complete these post-provisioning steps, you can:
 

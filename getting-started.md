@@ -166,7 +166,7 @@ You must create the proper Schematics access policies for a user to be able to u
 
 After you reviewed and completed these prerequisites, you are ready to provision {{site.data.keyword.cvad_full_notm}}. For more information, see:
 
-*  [Provisioning {{site.data.keyword.cvad_full_notm}}](/docs/citrix-daas?topic=citrix-daas-provisioning-citrix-daas-classic) for Classic and VMWare solutions
+*  [Provisioning {{site.data.keyword.cvad_full_notm}}](/docs/citrix-daas?topic=citrix-daas-provisioning-cvad-classic) for Classic and VMWare solutions
 
-* [Provisioning {{site.data.keyword.cvad_full_notm}} on Virtual Private Cloud](/docs/citrix-daas?topic=citrix-daas-provisioning-citrix-daas-vpc)
+* [Provisioning {{site.data.keyword.cvad_full_notm}} on Virtual Private Cloud](/docs/citrix-daas?topic=citrix-daas-provisioning-cvad-vpc)
 

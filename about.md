@@ -28,21 +28,21 @@ subcollection: citrix-daas
 The solution is integrated with the {{site.data.keyword.cvad_short}} service deployment model, which shifts the management of core components to Citrix so you can focus on managing your applications and desktops. {{site.data.keyword.cloud_notm}} creates the Citrix Cloud Connectors and other compute, networking, and storage components that are required to host your applications and desktops and connects the {{site.data.keyword.cloud_notm}} resource location to Citrix Cloud. You manage the infrastructure components after provisioning, including the Active Directory and Virtual Delivery Agents (VDAs).
 
 ## Provisioning {{site.data.keyword.cvad_short}} on Classic Infrastructure option
-{: #citrix-daas-classic-provisioning-options}
+{: #cvad-classic-provisioning-options}
 
- You can provision Citrix Hypervisor on Bare Metal servers or VMWare. For more information about provisioning on Classic infrastructure, see [Provisioning {{site.data.keyword.cvad_short}} on {{site.data.keyword.cloud_notm}} Classic infrastructure](/docs/citrix-daas?topic=citrix-daas-provisioning-citrix-daas-classic).
+ You can provision Citrix Hypervisor on Bare Metal servers or VMWare. For more information about provisioning on Classic infrastructure, see [Provisioning {{site.data.keyword.cvad_short}} on {{site.data.keyword.cloud_notm}} Classic infrastructure](/docs/citrix-daas?topic=citrix-daas-provisioning-cvad-classic).
 
 ![Architecture diagram.](images/CitrixArchDiagram.svg){: caption="Figure 1. {{site.data.keyword.cvad_full_notm}} Classic architecture diagram" caption-side="bottom"}
 
 ## Provisioning {{site.data.keyword.cvad_short}} on Virtual Private Cloud option
-{: #citrix-daas-vpc-provisioning-options}
+{: #cvad-vpc-provisioning-options}
 
-You can provision {{site.data.keyword.cvad_short}} on Virtual Private Cloud. For more information about provisioning on Virtual Private Cloud infrastructure, see [Provisioning {{site.data.keyword.cvad_full}} on Virtual Private Cloud](/docs/citrix-daas?topic=citrix-daas-provisioning-citrix-daas-vpc).
+You can provision {{site.data.keyword.cvad_short}} on Virtual Private Cloud. For more information about provisioning on Virtual Private Cloud infrastructure, see [Provisioning {{site.data.keyword.cvad_full}} on Virtual Private Cloud](/docs/citrix-daas?topic=citrix-daas-provisioning-cvad-vpc).
 
 ![Architecture diagram.](images/2vpc-deployment.png){: caption="Figure 2. {{site.data.keyword.cvad_full_notm}} VPC architecture diagram" caption-side="bottom"}
 
 ### Dedicated Host Control Plane
-{: #citrix-daas-vpc-dedicated-hosts-arch}
+{: #cvad-vpc-dedicated-hosts-arch}
 
 The standard dedicated host option for {{site.data.keyword.cvad_short}} on VPC provisions the control plane components (active directory, cloud connectors, and custom image VSI) onto public hosts and the VDAs to the dedicated hosts.
 
@@ -53,7 +53,7 @@ With the shared dedicated option, the control plane is also provisioned to the d
 ![Dedicated Host shared deployment diagram.](images/dedicated-deployment-shared.png){: caption="Figure 4. Dedicated Host shared deployment" caption-side="bottom"}
 
 ### Volume Worker 
-{: #citrix-daas-vpc-volume-worker-arch}
+{: #cvad-vpc-volume-worker-arch}
 
 Volume Worker distributes the work of the Citrix identity disk creation.
 The volume worker consists of 4 components:
@@ -84,7 +84,7 @@ The operation order that is shown in the diagram is:
 11. Cloud connector plug-in waits for completion log.
 
 ### Volume Worker and Logging
-{: #citrix-daas-vpc-volume-worker-logging}
+{: #cvad-vpc-volume-worker-logging}
 
 Some PaaS services are not available in all regions. The volume worker manager runs in {{site.data.keyword.openwhisk}} which is not available in br-sao, ca-tor, or jp-osa. To provide the volume worker in the br-sao, ca-tor, or jp-osa regions, the volume worker manager is deployed in an {{site.data.keyword.openwhisk_short}} instance residing in a nearby region:
 
@@ -95,6 +95,6 @@ Where the volume worker manager is deployed affects logging for those deployment
 
 
 ## Related information
-{: #citrix-daas-related-info}
+{: #cvad-related-info}
 
 For more information about {{site.data.keyword.cvad_short}} service, see [Citrix documentation](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops-service){: external}.

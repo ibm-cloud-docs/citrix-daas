@@ -22,7 +22,7 @@ subcollection: citrix-daas
 {:table: .aria-labeledby="caption"}
 
 # Provisioning {{site.data.keyword.cvad_full_notm}} on Virtual Private Cloud
-{: #provisioning-citrix-daas-vpc}
+{: #provisioning-cvad-vpc}
 
 Use this task to provision your {{site.data.keyword.cvad_full}} solution on {{site.data.keyword.IBM}} Virtual Private Cloud. This task corresponds to the provisioning form that you see when you select the **VPC** tile from the {{site.data.keyword.cvad_short}} page. Provisioning uses Schematics to provision your resources. For more information about Schematics, see [Schematics, {{site.data.keyword.cloud_notm}}’s deployment manager](https://cloud.ibm.com/schematics/overview).
 
@@ -157,8 +157,8 @@ Select a log instance option, either:
 Select your SSH Key or create a new one. 
 
 ## Next steps
-{: #next-steps-provisioning-citrix-daas-vpc}
+{: #next-steps-provisioning-cvad-vpc}
 
 When the components are provisioned, you are directed to the Schematics where you can view the resources that are being provisioned. 
 
-After the {{site.data.keyword.cvad_full_notm}} components are provisioned, you need to complete a few post-provisioning steps to get you up and running. For more information, see [Post-provisioning steps for {{site.data.keyword.cvad_short}} on VPC](/docs/citrix-daas?topic=citrix-daas-post-provisioning-citrix-daas-vpc).
+After the {{site.data.keyword.cvad_full_notm}} components are provisioned, you need to complete a few post-provisioning steps to get you up and running. For more information, see [Post-provisioning steps for {{site.data.keyword.cvad_short}} on VPC](/docs/citrix-daas?topic=citrix-daas-post-provisioning-cvad-vpc).

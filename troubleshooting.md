@@ -19,7 +19,7 @@ subcollection: citrix-daas
 {:table: .aria-labeledby="caption"}
 
 # Troubleshooting {{site.data.keyword.cvad_full_notm}} Classic
-{: #citrix-daas-troubleshooting-classic}
+{: #cvad-troubleshooting-classic}
 
 Use this information to troubleshoot {{site.data.keyword.cvad_full}} on Classic.
 

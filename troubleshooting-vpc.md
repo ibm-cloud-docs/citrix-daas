@@ -20,7 +20,7 @@ subcollection: citrix-daas
 {:table: .aria-labeledby="caption"}
 
 # Troubleshooting {{site.data.keyword.cvad_full_notm}} VPC
-{: #citrix-daas-troubleshooting-vpc}
+{: #cvad-troubleshooting-vpc}
 
 Use this information when troubleshooting {{site.data.keyword.cvad_full}} on VPC.
 
@@ -56,7 +56,7 @@ In the Schematics window, during the Terraform Apply, you see an error that is s
 ## Cloud connector is not registering
 {: #troubleshooting-vpc-cc-not-registered}
 
-During post-provisioning, you access the [Cloud Connector instance](/docs/citrix-daas?topic=citrix-daas-post-provisioning-citrix-daas-vpc#access-ad-connectors-vpc). If the Cloud Connector is not registering, in can be one of two problems. The messages are logged in the Cloud Connector log file on Citrix. 
+During post-provisioning, you access the [Cloud Connector instance](/docs/citrix-daas?topic=citrix-daas-post-provisioning-cvad-vpc#access-ad-connectors-vpc). If the Cloud Connector is not registering, in can be one of two problems. The messages are logged in the Cloud Connector log file on Citrix. 
 
 Create a floating ip to use Remote Desktop to get to the cloud connector log file on Citrix cloud. The file is `C:\ProgramData\IBMCitrixDaaS\Logs\IBMCitrixDaaSInstallation.log`. Close to the end of the log file is either a:
 * 1603 error 

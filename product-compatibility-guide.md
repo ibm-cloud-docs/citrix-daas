@@ -39,7 +39,7 @@ This hardware information applies to Classic configurations only.
 {: caption="Table 1. Supported Intel processors" caption-side="top"}
 
 ## VPC supported profiles
-{: #citrix-daas-vpc-profiles}
+{: #cvad-vpc-profiles}
 
 For information about VPC profiles that are supported for {{site.data.keyword.cvad_short}} VPC, see [Instance Profiles](/docs/vpc?topic=vpc-profiles&interface=ui).[^sizing]
 

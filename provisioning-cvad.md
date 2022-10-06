@@ -46,14 +46,14 @@ If you ordered {{site.data.keyword.cvad_short}} with Citrix Hypervisors, you rec
 If you ordered {{site.data.keyword.cvad_short}} with VMware ESXi Hosts, you receive:
 
 *	VMware ESXi hosts -  You need to choose the configuration and quantity of bare metal servers during the ordering process. The VMware cluster is configured with these ESXi hosts.
-*	Fully configured vCenter server with NSX-V. You can choose to purchase the [licenses](https://test.cloud.ibm.com/docs/citrix-daas?topic=citrix-daas-provisioning-citrix-daas#licensing-vmware) either from IBM or use your own license keys.
+*	Fully configured vCenter server with NSX-V. You can choose to purchase the [licenses](/docs/citrix-daas?topic=citrix-daas-provisioning-cvad#licensing-vmware) either from IBM or use your own license keys.
 *	Fully configured Active Directory server in the VMware cluster configured to enable deployments. No post-provisioning is required for this Active Directory server. This Active Directory server is in addition to the Active Directory servers used by {{site.data.keyword.cvad_full_notm}}. For more information, see [Active Directory Domain Services introduction](https://cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-adds-intro). 
 *	File Storage with the capacity that you choose during the ordering process.
 * vSAN storage based on the capacity of the disks you chose during the ordering process.
 
 
 ## Before you begin
-{: #before-you-begin-provisioning-citrix-daas}
+{: #before-you-begin-provisioning-cvad}
 
 You can provision {{site.data.keyword.cvad_full}} through the {{site.data.keyword.cloud_notm}} catalog and then manage the workloads through the Citrix Cloud management console.
 {: shortdesc}
@@ -174,4 +174,4 @@ Licensing applies to VMware configurations only.
 
 When the components are provisioned, you receive an email with information about the components ordered.
 
-After the {{site.data.keyword.cvad_full_notm}} components are provisioned, you need to complete a few post-provisioning steps to get you up and running. For more information, see [Post-provisioning steps for Citrix Hypervisor](/docs/citrix-daas?topic=citrix-daas-post-provisioning-citrix-daas).
+After the {{site.data.keyword.cvad_full_notm}} components are provisioned, you need to complete a few post-provisioning steps to get you up and running. For more information, see [Post-provisioning steps for Citrix Hypervisor](/docs/citrix-daas?topic=citrix-daas-post-provisioning-cvad).

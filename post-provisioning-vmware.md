@@ -21,7 +21,7 @@ subcollection: citrix-daas
 {:table: .aria-labeledby="caption"}
 
 # Post-provisioning steps for VMware ESXi
-{: #post-provisioning-citrix-daas-vmware}
+{: #post-provisioning-cvad-vmware}
 
 After you provision your {{site.data.keyword.cvad_full}} ({{site.data.keyword.cvad_short}}) with the VMware Hypervisor, complete the following tasks:
 
@@ -130,7 +130,7 @@ Other Active Directory Best practices include:
    
    You must set up another Gateway appliance on-premises too. Configure both the appliances and establish network connectivity between the two sites.
 
-   When you order a gateway appliance from {{site.data.keyword.cloud_notm}}, the data center and backend VLAN must correspond to the same data center and VLAN where your other services are provisioned. See [View network details](/docs/citrix-daas?topic=citrix-daas-post-provisioning-citrix-daas#view-network-details).
+   When you order a gateway appliance from {{site.data.keyword.cloud_notm}}, the data center and backend VLAN must correspond to the same data center and VLAN where your other services are provisioned. See [View network details](/docs/citrix-daas?topic=citrix-daas-post-provisioning-cvad#view-network-details).
    {: important}
 
 2. Domain join Cloud Connectors with Active Directory server
@@ -147,6 +147,7 @@ Other Active Directory Best practices include:
     4. Run the **ManualRegisterConnector.ps1** command: 
 
        If you are using the APIClientID and APIClientSecret that you used to create the order, enter:
+
        ```
        ./ManualRegisterConnector.ps1 -ADDomainName {ADDomainName} -ADServerName {ADServerName} -ActiveDirectoryUserName {ActiveDirectoryUserName} -ActiveDirectoryPassword {ActiveDirectoryPassword} -PreferredDnsServer {PreferredDnsServer}
        ```
