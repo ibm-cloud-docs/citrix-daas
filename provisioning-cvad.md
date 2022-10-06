@@ -21,7 +21,7 @@ subcollection: citrix-daas
 {:table: .aria-labeledby="caption"}
 
 # Provisioning {{site.data.keyword.cvad_full_notm}} Classic infrastructure
-{: #provisioning-citrix-daas-classic}
+{: #provisioning-cvad-classic}
 
 ## What is provisioned
 {: #what-is-provisioned-classic}
