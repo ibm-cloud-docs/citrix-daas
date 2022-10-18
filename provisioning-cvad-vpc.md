@@ -156,6 +156,18 @@ Select a log instance option, either:
 
 Select your SSH Key or create a new one. 
 
+## Step 8 - Custom configuration (optional)
+{: #provision-vpc-custom-config}
+
+{{site.data.keyword.cvad_full_notm}} provisioning uses Terraform scripts and {{site.data.keyword.cloud_notm}} Schematics to create your resources.  
+
+If you want only the items on the provisioning form, you select **Create**. The scripts create a Schematics workspace for you where you can see your script logs and the resources that are provisioned.  
+
+If you want to further customize your resources, you select **Enable configuration customization after 'Create'** and then **Create**. The scripts create the Schematics workspace for you and show you the parameters that you can customize. After you are done customizing the parameters, you select **Generate Plan** then **Apply plan**. The Terraform scripts run and create your resources. 
+
+For more information about Schematics, see [Getting started: IBM Cloud Schematics](/docs/schematics?topic=schematics-getting-started).
+
+
 ## Next steps
 {: #next-steps-provisioning-cvad-vpc}
 
