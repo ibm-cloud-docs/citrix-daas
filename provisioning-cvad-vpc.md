@@ -193,4 +193,4 @@ For more information about Schematics, see [Getting started: IBM Cloud Schematic
 
 As the components are provisioned, you are directed to the Schematics workspace page for your deployment, where you can view the script logs. 
 
-After the {{site.data.keyword.cvad_full_notm}} components are provisioned, you need to complete a few post-provisioning steps to get you up and running. For more information, see [Post-provisioning steps for {{site.data.keyword.cvad_short}} on VPC](/docs/citrix-daas?topic=citrix-daas-post-provisioning-cvad-vpc).
+After the {{site.data.keyword.cvad_full_notm}} components are provisioned, you need to complete a few post-provisioning steps to get you up and running. For more information, see [Post-provisioning steps for {{site.data.keyword.cvad_short}} on VPC](/docs/citrix-daas?topic=citrix-daas-post-provisioning-citrix-daas-vpc).
