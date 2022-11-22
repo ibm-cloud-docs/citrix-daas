@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021, 2022
-lastupdated: "2022-08-29"
+lastupdated: "2022-11-22"
 
 keywords:
 
@@ -21,22 +21,23 @@ subcollection: citrix-daas
 {:beta: .beta}
 {:table: .aria-labeledby="caption"}
 
-# Post-provisioning steps for {{site.data.keyword.cvad_full_notm}} on Virtual Private Cloud
-{: #post-provisioning-cvad-vpc}
+# Post-provisioning steps for {{site.data.keyword.cvad_short}} on Virtual Private Cloud
+{: #post-provisioning-citrix-daas-vpc}
 
-After you provision your {{site.data.keyword.cvad_full}} ({{site.data.keyword.cvad_short}}) with the Virtual Private Cloud (VPC), complete the following tasks:
+After you provision your {{site.data.keyword.cvad_full}} with the Virtual Private Cloud (VPC), complete the following tasks:
 
 1.	Verify the status of provisioned servers and view network details.
 2.  Establish network connectivity for Active Directory topologies (Extended only)
 3.	Access the Active Directory, Cloud Connectors. (Extended only)
-4.	Create a master image of virtual machine.
-5.  Customize {{site.data.keyword.la_full}} (Optional)
+4.	Create a custom image of virtual machine.
+5.  Customize {{site.data.keyword.la_full_notm}} (Optional)
+6.  Make additional boot volume space accessible (Optional)
 
 ## Step 1: Verify the status of provisioned servers and view network details (Optional)
 {: #verify-vpc-status-server-network}
 
-{{site.data.keyword.cvad_short}} provisions resources by using Terraform and Schematics. You can view the details of the IBM Cloud Schematics deployments and the IBM Cloud resources that you currently manage with IBM Cloud Schematics. For more information, see 
-[Managing IBM Cloud resources with Schematics - Reviewing resource and deployment details](/docs/schematics?topic=schematics-manage-lifecycle#review-logs).
+{{site.data.keyword.cvad_short}} provisions resources by using Terraform and Schematics. You can view the details of the {{site.data.keyword.cloud_notm}} Schematics deployments and the {{site.data.keyword.cloud_notm}} resources that you currently manage with {{site.data.keyword.cloud_notm}} Schematics. For more information, see 
+[Managing {{site.data.keyword.cloud_notm}} resources with Schematics - Reviewing resource and deployment details](/docs/schematics?topic=schematics-manage-lifecycle#review-logs).
 
 Log in to citrix.cloud.com and verify that your Active Directory is listed under Domains and that your resource location is Green.
 
@@ -44,10 +45,10 @@ Log in to citrix.cloud.com and verify that your Active Directory is listed under
 ## Step 2. Establish network connectivity for Active Directory Topology
 {: #ad-topology-network-connectivity-vmware}
 
-### IBM Cloud 
+### {{site.data.keyword.cloud_notm}} 
 {: #ad-topology-network-connectivity-cloud-vmware}
 
-If you chose **IBM Cloud** Active Directory topology and are using the Active Directory in {{site.data.keyword.cloud_notm}} as your only domain controller, no further network configuration is required. The Cloud Connectors are joined to the Active Directory server domain and are configured to communicate with Citrix Cloud. You might have to create users with the necessary privileges. You can also create bulk users in Active Directory. For more information, see this step-by-step guide on how to [Create bulk users in Active Directory](https://activedirectorypro.com/create-bulk-users-active-directory/){: external}.
+If you chose **{{site.data.keyword.cloud_notm}}** Active Directory topology and are using the Active Directory in {{site.data.keyword.cloud_notm}} as your only domain controller, no further network configuration is required. The Cloud Connectors are joined to the Active Directory server domain and are configured to communicate with Citrix Cloud. You might have to create users with the necessary privileges. You can also create bulk users in Active Directory. For more information, see this step-by-step guide on how to [Create bulk users in Active Directory](https://activedirectorypro.com/create-bulk-users-active-directory/){: external}.
 
 ### Extended
 {: #ad-topology-network-connectivity-hybrid-vpc}
@@ -105,11 +106,10 @@ You must create and assign a floating IP to the instance to connect on the publi
 
 For more information about connecting to instances, see [Connecting to Windows instances](/docs/vpc?topic=vpc-vsi_is_connecting_windows).
 
-
-## Step 4: Create master image of virtual machine
+## Step 4: Create custom image of virtual machine
 {: #create-master-image-vmware}
 
-If you do not have an existing master image, you can create a master image now. 
+If you do not have an existing custom image, you can create a custom image now. 
 
 1.  Upload your SSH key from your local machine to the {{site.data.keyword.cloud_notm}}.
 2.  Using the UI or Terraform with schematics order your VPC and select add a Custom Image Virtual Machine. Select your SSH key.
@@ -121,29 +121,41 @@ If you do not have an existing master image, you can create a master image now.
     *  In Step 4, choose **Create a master MCS image**.
     *  In Step 8, choose **Let Machine Creation Services do it automatically**.
 8.  Run Windows update again.
-9.  Log in to [Citrix Cloud Portal](http://citrix.cloud.com).
+9.  Log in to [Citrix cloud console](http://citrix.cloud.com).
 10.  Create a hosting connection for your resource location
 11.  Select the **Create a Machine Catalog**. Make sure you select the proper Active Directory. You need your Active Directory password that was decrypted earlier. An example of a username is: youraddomain\Administrator. Select the Custom Image Virtual Machine boot volume that you provisioned under volumes and the resource group for your VPC.
 
 ## Step 5: Customizing {{site.data.keyword.la_full_notm}} (Optional)
-{: #cvad-post-prov-vpc-logging}
+{: #citrix-daas-post-prov-vpc-logging}
 
-You can define alerts and design custom views to monitor application and system logs  with{{site.data.keyword.la_full_notm}}. For more information, see [Getting Started](/docs/log-analysis?topic=log-analysis-getting-started#getting-started).
+You use {{site.data.keyword.la_full}} to define alerts and design custom views to monitor application and system logs. For more information, see [Getting Started](/docs/log-analysis?topic=log-analysis-getting-started#getting-started).
 
 If you want to gather windows event logs, you must configure NXLog and deploy a syslog port from {{site.data.keyword.la_full_notm}}. For more information, see [Configuring NXLog](/docs/log-analysis?topic=log-analysis-windows_serv#windows_server-include-nxlog_config).
 
 If you selected **Enable Platform** to view platform messages, you use {{site.data.keyword.la_full_notm}} to configure a logging instance in a region to monitor these logs. Platform logs can be enabled for only one logging instance per region. For more information, see [Configuring IBM Cloud platform logs](/docs/log-analysis?topic=log-analysis-config_svc_logs).
 
-If you selected br-sao, ca-tor, or jp-oas as your deployment region you must also configure a logging instance in a nearby region to receive volume worker manager logs:
+If you selected br-sao, ca-tor, or jp-osa as your deployment region you must also configure a logging instance in a nearby region to receive volume worker manager logs: 
 
-*   For br-sao and ca-tor, us-east is used.
-*   For jp-osa, jp-tok is used.
+* For br-sao and ca-tor, us-east is used. 
+* For jp-osa, jp-tok is used. 
 
-For more information, see (Configuring IBM Cloud platform logs([/docs/log-analysis?topic=log-analysis-config_svc_logs]).
+For more information, see [Configuring IBM Cloud platform logs](/docs/log-analysis?topic=log-analysis-config_svc_logs).
+
+## Step 6: Make additional boot volume space accessible (Optional)
+{: #citrix-daas-post-prov-vpc-boot-vol}
+
+When you select a larger boot volume and not the default 100GB, the additional space is added as unallocated space to the machine. In this example, the unallocated space is added to Disk 0:
+
+![Larger boot volume.](images/boot-volume1.png){: caption="Figure 1. Larger boot volume" caption-side="bottom"}
+
+You can use the Windows Disk partition and the Disk Management tools to view and extend the C: partition or create addiitional partitions with the unallocated space. 
+
+For more information about the Windows tools used, see [Extend a basic volume](https://learn.microsoft.com/en-us/windows-server/storage/disk-management/extend-a-basic-volume){: external}.
+
 
 ## Next steps
-{: #cvad-post-prov-vpc-next}
+{: #citrix-daas-post-prov-vpc-next}
 
 After you complete these post-provisioning steps, you can:
 
-*  Complete your management tasks in the [Citrix Cloud Portal](http://citrix.cloud.com){: external}.
+*  Complete your management tasks in the [Citrix cloud console](http://citrix.cloud.com){: external}.
