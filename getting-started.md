@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2021, 2022
-lastupdated: "2022-07-06"
+  years: 2020, 2023
+lastupdated: "2023-02-08"
 
 keywords:
 
@@ -23,10 +23,10 @@ subcollection: citrix-daas
 # Getting started with {{site.data.keyword.cvad_full_notm}} 
 {: #getting-started-tutorial}
 
-Citrix Virtual Apps and Desktops on IBM Cloud;reg; is now {{site.data.keyword.cvad_full}}. If you are using bookmarks to access the documentation, you should update them to the new product name path.
+Citrix Virtual Apps and Desktops on IBM Cloud&reg; is now {{site.data.keyword.cvad_full}}. If you are using bookmarks to access the documentation, you should update them to the new product name path.
 {: note}
 
-Use {{site.data.keyword.cvad_full}} to create a dedicated {{site.data.keyword.cvad_short}} service environment at any of our global data centers. You have the option of creating a Classic solution, VMWare solution, or VPC solution. 
+Use {{site.data.keyword.cvad_full}} to create a dedicated {{site.data.keyword.cvad_short}} service environment at any of our global data centers. You have the option of creating a Classic solution, VMware solution, or VPC solution. 
 {: shortdesc}
 
 ## Before you begin
@@ -168,5 +168,5 @@ After you reviewed and completed these prerequisites, you are ready to provision
 
 *  [Provisioning {{site.data.keyword.cvad_full_notm}}](/docs/citrix-daas?topic=citrix-daas-provisioning-cvad-classic) for Classic and VMWare solutions
 
-* [Provisioning {{site.data.keyword.cvad_full_notm}} on Virtual Private Cloud](/docs/citrix-daas?topic=citrix-daas-provisioning-cvad-vpc)
+* [Provisioning {{site.data.keyword.cvad_full_notm}} on Virtual Private Cloud](/docs/citrix-daas?topic=citrix-daas-provisioning-citrix-daas-vpc)
 
