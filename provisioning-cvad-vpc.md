@@ -145,7 +145,7 @@ When you provision virtual server instances and dedicated hosts, the vCPU associ
 {: #images-profiles-mach-catalog}
 
 1.  Indicate whether you want to use a custom image to build the base image for your machine catalog.
-    *  Select the operating system and version for the custom image. For Windows images, you can select provider images or custom OS images.
+    *  Select the version for the custom image. For Windows images, you can select provider images or custom OS images.
     *  Select the virtual server profile for the custom image to provision your virtual server instances in post provisioning. [^sizing]
 2.  Select your SSH key or create a new one.
 3.  Specify the size for your boot volume. The default is 100GB. If you require a larger boot volume size, you can specify 100-250GB inclusive. If you specify greater than 100GB, you must make the additional disk space accessible in post-provisioning. For more information, see [Step 6: Make additional boot volume space accessible](/docs/citrix-daas?topic=citrix-daas-post-provisioning-citrix-daas-vpc#citrix-daas-post-prov-vpc-boot-vol) in the post-provisioning steps for {{site.data.keyword.cvad_short}} on Virtual Private Cloud.
