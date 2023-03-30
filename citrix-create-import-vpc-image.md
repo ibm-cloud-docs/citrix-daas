@@ -79,6 +79,8 @@ Obtain the required virtio-win drivers by [provisioning](/docs/vpc?topic=vpc-cre
       ```
       {: codeblock}
 
+   3. Use SCP to copy the virtio-win ISO file, for example `virtio-win-1.9.15.iso`, to use for your Windows custom image.  
+
 
 Locate and read these documents:
 *  [Sysprep (Generalize) a Windows installation](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/sysprep--generalize--a-windows-installation?view=windows-10)
