@@ -47,6 +47,11 @@ toc:
           - configure-monitoring.md
 
      - topicgroup:
+        label: Using Windows 10 and Windows 11
+        topics:
+          - citrix-create-import-vpc-image.md
+
+     - topicgroup:
         label: Managing servers
         topics:
           - order-bm-servers.md
