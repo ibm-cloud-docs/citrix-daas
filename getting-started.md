@@ -19,14 +19,18 @@ subcollection: citrix-daas
 {:important: .important}
 {:beta: .beta}
 {:table: .aria-labeledby="caption"}
+{: deprecated: .deprecated} 
 
 # Getting started with {{site.data.keyword.cvad_full_notm}} 
 {: #getting-started-tutorial}
 
+{{site.data.keyword.cvad_full}} Classic automation is deprecated. As of 12-4-23, you can't create new classic instances with automation. 
+{: deprecated}
+
 Citrix Virtual Apps and Desktops on IBM Cloud&reg; is now {{site.data.keyword.cvad_full}}. If you are using bookmarks to access the documentation, you should update them to the new product name path.
 {: note}
 
-Use {{site.data.keyword.cvad_full}} to create a dedicated {{site.data.keyword.cvad_short}} service environment at any of our global data centers. You have the option of creating a Classic solution, VMware solution, or VPC solution. 
+Use {{site.data.keyword.cvad_full}} to create a dedicated {{site.data.keyword.cvad_short}} service environment at any of our global data centers. You have the option of creating a VMware solution, or VPC solution.    
 {: shortdesc}
 
 ## Before you begin
@@ -45,7 +49,7 @@ After you review this information, you are ready to get started. To begin, you n
 2. Create required API keys
 3. Verify Citrix and operating system entitlements
 4. Set up network connectivity for logging on to {{site.data.keyword.cloud_notm}}
-5. (VMWare only) Enable VLAN spanning or VRF on your account
+5. Enable VLAN spanning or VRF on your account
 6. Set up user permissions in IAM
 
 ## Step 1. Sign up for an {{site.data.keyword.cloud_notm}} account
@@ -56,7 +60,9 @@ To order and use {{site.data.keyword.cloud_notm}} services, you need to sign up 
 ## Step 2. Create {{site.data.keyword.cloud_notm}} API keys
 {: #create-api-keys}
 
-For Classic and VMWare solutions, you need to add a classic infrastructure API key to your {{site.data.keyword.cloud_notm}} account. For more information about creating or managing API keys, see [Managing classic infrastructure API keys](/docs/account?topic=account-classic_keys).
+For Classic and VMware solutions, you need to add a classic infrastructure API key to your {{site.data.keyword.cloud_notm}} account. For more information about creating or managing API keys, see [Managing classic infrastructure API keys](/docs/account?topic=account-classic_keys).
+{: deprecated}
+
 
 For VPC solutions, you need to add an {{site.data.keyword.cloud_notm}} API key to your {{site.data.keyword.cloud_notm}} account. For more information about creating or managing API keys, see [Managing user API keys](/docs/account?topic=account-userapikey&interface=ui).
 
@@ -70,10 +76,10 @@ Verify that you have the {{site.data.keyword.cvad_short}} service license availa
 
 All of the resources that are provisioned through this solution are in a private network space with security groups attached wherever needed. The IP addresses are internal to IBM, so you need to use a separate VPN account for logging on to hypervisors and creating the virtual machine images. For more information about enabling VPN access and setting the password, see [Getting started with {{site.data.keyword.cloud_notm}} Virtual Private Networking](/docs/iaas-vpn?topic=iaas-vpn-getting-started). After you enable your VPN access and set the password, download the [VPN client](/docs/iaas-vpn?topic=iaas-vpn-standalone-vpn-clients). You then have access to the private network where your resources are provisioned.
 
-## Step 5. Enable VLAN spanning or VRF on your {{site.data.keyword.cloud_notm}} account (Classic and VMWare only)
+## Step 5. Enable VLAN spanning or VRF on your {{site.data.keyword.cloud_notm}} account 
 {: #enable-vlan-spanning}
 
-To enable VLAN spanning for your classic and VMWare solutions, complete the following steps:
+To enable VLAN spanning for your VMware solutions, complete the following steps:
 1. Log in to the {{site.data.keyword.cloud_notm}} console by using your unique credentials. 
 2. Select **Menu icon ![Menu icon](../../icons/icon_hamburger.svg) > Classic Infrastructure > Network > IP Management > VLANs**. 
 3. Click **VLAN Spanning** and select _Enable_. 
@@ -86,7 +92,11 @@ To enable VRF, see [Enabling VRF](/docs/account?topic=account-vrf-service-endpoi
 ### Classic
 {: #set-up-user-permissions-classic}
 
+{{site.data.keyword.cvad_full}} Classic is deprecated. As of 12-4-23, you can't create new instances, and access to free instances will be removed.  Any instance that still exists on that date will be deleted. Migrate your information to Citrix Virtual Private Cloud.  
+{: deprecated}
+
 To provision {{site.data.keyword.cvad_full_notm}}, classic infrastructure users need these permissions: 
+{: deprecated}
 
 | Category | Permission |
 | -------- | ---------- |
@@ -95,12 +105,17 @@ To provision {{site.data.keyword.cvad_full_notm}}, classic infrastructure users 
 | Network | - Add IP addresses   \n - Add Compute with Public Network Port|
 | Services |- View licenses   \n - Storage Manage |
 {: caption="Table 1. Required user permissions to provision Classic and VMwWre" caption-side="top"}
+{: deprecated}
 
-To access and update the classic infrastructure permissions, complete the following steps:
+To access and update the classic infrastructure permissions, complete the following steps:{: deprecated}
 
-1. In the {{site.data.keyword.cloud_notm}} console, go to **Manage > Access (IAM)** and select **Users**. 
-2. Select the user's name that you want to update access for, and click **Classic infrastructure**. 
-3. If the user is a _Basic User_, you need to add the permission sets as shown in Table 1. 
+
+1. In the {{site.data.keyword.cloud_notm}} console, go to **Manage > Access (IAM)** and select **Users**. {: deprecated}
+
+2. Select the user's name that you want to update access for, and click **Classic infrastructure**. {: deprecated}
+
+3. If the user is a _Basic User_, you need to add the permission sets as shown in Table 1. {: deprecated}
+
 
 ### VMware solutions
 {: #set-up-user-permissions-vmware}
@@ -166,7 +181,8 @@ You must create the proper Schematics access policies for a user to be able to u
 
 After you reviewed and completed these prerequisites, you are ready to provision {{site.data.keyword.cvad_full_notm}}. For more information, see:
 
-*  [Provisioning {{site.data.keyword.cvad_full_notm}}](/docs/citrix-daas?topic=citrix-daas-provisioning-cvad-classic) for Classic and VMWare solutions
+*  [Provisioning {{site.data.keyword.cvad_full_notm}}](/docs/citrix-daas?topic=citrix-daas-provisioning-citrix-daas-classic) for Classic and VMware solutions
+{: deprecated}
 
 * [Provisioning {{site.data.keyword.cvad_full_notm}} on Virtual Private Cloud](/docs/citrix-daas?topic=citrix-daas-provisioning-citrix-daas-vpc)
 

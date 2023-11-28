@@ -19,9 +19,13 @@ subcollection: citrix-daas
 {:important: .important}
 {:note: .note}
 {:table: .aria-labeledby="caption"}
+{: deprecated: .deprecated} 
 
 # Post-provisioning steps for Citrix Hypervisor  
-{: #post-provisioning-cvad} 
+{: #post-provisioning-citrix-daas} 
+
+{{site.data.keyword.cvad_full}} Classic automation is deprecated. As of 12-4-23, you can't create new classic instances with automation. 
+{: deprecated}
 
 After you provision your {{site.data.keyword.cvad_full}} ({{site.data.keyword.cvad_short}}) with the Citrix Hypervisor (formerly known as XenServer), complete the following tasks:
 
@@ -65,16 +69,16 @@ Complete the following steps to identify and view your File Storage details.
 
 Optionally, you can provision a virtual server instance with a Windows operating system to manage your {{site.data.keyword.cvad_full_notm}}. You can use a jump server to start a Remote Desktop session to access the Active Directory server and Citrix Cloud Connectors. The jump server is also needed to start the XenCenter management interface. You can order a Windows virtual server instance through the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/gen1/infrastructure/provision/vs?cm_sp=Cloud-Product-_-OnPageNav-IBMCloudPlatform_IBMVirtualMachines-_-VSI_Prod_Midpage){: external}.
 
-You must provision the virtual server instance with the same [network details](/docs/citrix-daas?topic=citrix-daas-post-provisioning-cvad#view-network-details) as the other service components that are attached to the resource location.
+You must provision the virtual server instance with the same [network details](/docs/citrix-daas?topic=citrix-daas-post-provisioning-citrix-daas#view-network-details) as the other service components that are attached to the resource location.
 {: important}
 
 ## Step 3. Establish network connectivity for Active Directory Topology
 {: #ad-topology-network-connectivity}
 
-### IBM Cloud 
+### {{site.data.keyword.cloud_notm}} 
 {: #ad-topology-network-connectivity-cloud}
 
-If you chose **IBM Cloud** Active Directory topology and are using the Active Directory in {{site.data.keyword.cloud_notm}} as your only domain controller, no further network configuration is required. The Cloud Connectors are joined to the Active Directory server domain and are configured to communicate with Citrix Cloud. You might have to create users with the necessary privileges. You can also create bulk users in Active Directory. For more information, see this step-by-step guide on how to [Create bulk users in Active Directory](https://activedirectorypro.com/create-bulk-users-active-directory/){: external}.
+If you chose **{{site.data.keyword.cloud_notm}}** Active Directory topology and are using the Active Directory in {{site.data.keyword.cloud_notm}} as your only domain controller, no further network configuration is required. The Cloud Connectors are joined to the Active Directory server domain and are configured to communicate with Citrix Cloud. You might have to create users with the necessary privileges. You can also create bulk users in Active Directory. For more information, see this step-by-step guide on how to [Create bulk users in Active Directory](https://activedirectorypro.com/create-bulk-users-active-directory/){: external}.
 
 ### Extended (Multisite)
 {: #ad-topology-network-connectivity-hybrid}
@@ -85,7 +89,7 @@ If you chose **IBM Cloud** Active Directory topology and are using the Active Di
    
    You must set up another Gateway appliance on-premises too. Configure both the appliances and establish network connectivity between the two sites.
 
-   When you order a gateway appliance from {{site.data.keyword.cloud_notm}}, the data center and backend VLAN must correspond to the same data center and VLAN where your other services are provisioned. See [View network details](/docs/citrix-daas?topic=citrix-daas-post-provisioning-cvad#view-network-details).
+   When you order a gateway appliance from {{site.data.keyword.cloud_notm}}, the data center and backend VLAN must correspond to the same data center and VLAN where your other services are provisioned. See [View network details](/docs/citrix-daas?topic=citrix-daas-post-provisioning-citrix-daas#view-network-details).
    {: important}
 
 2. Install the domain controller in {{site.data.keyword.cloud_notm}}  
@@ -106,23 +110,22 @@ If you chose **IBM Cloud** Active Directory topology and are using the Active Di
     4. Run the **ManualRegisterConnector.ps1** command: 
 
        If you are using the APIClientID and APIClientSecret that you used to create the order, enter:
-       ```
-       ./ManualRegisterConnector.ps1 -ADDomainName {ADDomainName} -ADServerName {ADServerName} -ActiveDirectoryUserName {ActiveDirectoryUserName} -ActiveDirectoryPassword {ActiveDirectoryPassword} -PreferredDnsServer {PreferredDnsServer}
-       ```
+
+       `./ManualRegisterConnector.ps1 -ADDomainName {ADDomainName} -ADServerName {ADServerName} -ActiveDirectoryUserName {ActiveDirectoryUserName} -ActiveDirectoryPassword {ActiveDirectoryPassword} -PreferredDnsServer {PreferredDnsServer}`
 
        Replace the contents of the {} with the values for your system. 
 
        If you need to use a different APIClientID and APIClientSecret enter:
-         ```
-       ./ManualRegisterConnector.ps1 -APIClientID {APIClientID} -APIClientSecret {APIClientSecret} -ADDomainName {ADDomainName} -ADServerName {ADServerName} -ActiveDirectoryUserName {ActiveDirectoryUserName} -ActiveDirectoryPassword {ActiveDirectoryPassword} -PreferredDnsServer {PreferredDnsServer}
-         ```
+
+       `./ManualRegisterConnector.ps1 -APIClientID {APIClientID} -APIClientSecret {APIClientSecret} -ADDomainName {ADDomainName} -ADServerName {ADServerName} -ActiveDirectoryUserName {ActiveDirectoryUserName} -ActiveDirectoryPassword {ActiveDirectoryPassword} -PreferredDnsServer {PreferredDnsServer}`
 
        Replace the contents of the {} with the values for your system. 
 
 ### Extended (Site-to-Site)
 {: #ad-topology-network-connectivity-onprem}
 
-**Domain controller latency issues**
+#### Domain controller latency issues
+{: #domain-control-latency}
 
 The Extended (Site-to-Site) option does not have a domain controller (DC) on {{site.data.keyword.cloud_notm}}. Sites that do not have domain controllers are less efficient because of slow AD authentication and GPO processing. If you have sites with no DCs, you can limit the latency issues if you:
 * Create the AD subnets for these sites and link them to the closest site with a DC. The sites reach the on-premises side for AD authentication and GPO processing.
@@ -132,9 +135,10 @@ Other Active Directory Best practices include:
 * Establish as a site every geographic area that requires fast access to the most recent directory information. Establishing areas that require immediate access to up-to-date Active Directory information as separate sites provide the resources that are required to meet your needs.
 * Place at least one domain controller in every site, and make at least one domain controller in each site a global catalog. Sites that do not have their own domain controllers and at least one global catalog depend on other sites for directory information and are less efficient. For more information, see [Active Directory Best Practices](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc778219%28v=ws.10%29)
 
-**Network Connectivity** 
+#### Network Connectivity
+{: #network-connect}
 
-1. With an Extended (Site-to-Site) setup, you must establish network connectivity between {{site.data.keyword.cloud_notm}} and your on-premises location. 
+1. With an On-Premises setup, you must establish network connectivity between {{site.data.keyword.cloud_notm}} and your on-premises location. 
 
    You can set up network connectivity by using any of the gateway appliances available in {{site.data.keyword.cloud_notm}}. For more information, see the **About** section in the [Gateway Appliance {{site.data.keyword.cloud_notm}} catalog page](https://cloud.ibm.com/gen1/infrastructure/provision/gateway){: external}. 
    
@@ -157,16 +161,14 @@ Other Active Directory Best practices include:
     4. Run the **ManualRegisterConnector.ps1** command: 
 
        If you are using the APIClientID and APIClientSecret that you used to create the order, enter:
-       ```
-       ./ManualRegisterConnector.ps1 -ADDomainName {ADDomainName} -ADServerName {ADServerName} -ActiveDirectoryUserName {ActiveDirectoryUserName} -ActiveDirectoryPassword {ActiveDirectoryPassword} -PreferredDnsServer {PreferredDnsServer}
-       ```
+
+       `./ManualRegisterConnector.ps1 -ADDomainName {ADDomainName} -ADServerName {ADServerName} -ActiveDirectoryUserName {ActiveDirectoryUserName} -ActiveDirectoryPassword {ActiveDirectoryPassword} -PreferredDnsServer {PreferredDnsServer}`
 
        Replace the contents of the {} with the values for your system. 
 
        If you need to use a different APIClientID and APIClientSecret enter:
-         ```
-       ./ManualRegisterConnector.ps1 -APIClientID {APIClientID} -APIClientSecret {APIClientSecret} -ADDomainName {ADDomainName} -ADServerName {ADServerName} -ActiveDirectoryUserName {ActiveDirectoryUserName} -ActiveDirectoryPassword {ActiveDirectoryPassword} -PreferredDnsServer {PreferredDnsServer}
-         ```
+
+       `./ManualRegisterConnector.ps1 -APIClientID {APIClientID} -APIClientSecret {APIClientSecret} -ADDomainName {ADDomainName} -ADServerName {ADServerName} -ActiveDirectoryUserName {ActiveDirectoryUserName} -ActiveDirectoryPassword {ActiveDirectoryPassword} -PreferredDnsServer {PreferredDnsServer}`
 
        Replace the contents of the {} with the values for your system. 
 
@@ -226,13 +228,15 @@ The Active Directory and Cloud Connectors can be accessed through a Remote Deskt
 7. (Optional) To give access to all other non-administrator users, do one of the following methods:
 
       * Use Microsoft Group Policy settings
-      * Update the windows registry on the master image and set **Proxysettingsperuser** to ***0***.
+      * Update the windows registry on the master image and set **Proxysettingsperuser** to __0_.
         1. Press the `Win+R` keys to optn the Run window. 
         2. Enter **regedit** and **Enter** to open the Registry Editor. 
         3. In registry Editor, navigate to the following registry path:
-        HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings
+
+         HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings
         4. Double-click on the **ProxySettingsPerUser** registry.
         5. Change the Value to **0**.
+
 
 Individual virtual machine performance varies depending on workload. However, to take advantage of optimizations that might result in improved performance, you can use the [Citrix Optimizer](https://support.citrix.com/article/CTX224676){: external} and this [tool for Windows 10](https://techcommunity.microsoft.com/t5/windows-virtual-desktop/windows-virtual-desktop-optimization-tool-now-available/m-p/1558614){: external}.
 {: tip} 

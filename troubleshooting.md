@@ -17,11 +17,13 @@ subcollection: citrix-daas
 {:pre: .pre}
 {:tip: .tip}
 {:table: .aria-labeledby="caption"}
+{: deprecated: .deprecated} 
 
 # Troubleshooting {{site.data.keyword.cvad_full_notm}} Classic
-{: #cvad-troubleshooting-classic}
+{: #citrix-daas-troubleshooting-classic}
 
-Use this information to troubleshoot {{site.data.keyword.cvad_full}} on Classic.
+{{site.data.keyword.cvad_full}} Classic automation is deprecated. As of 12-4-23, you can't create new classic instances with automation. 
+{: deprecated}
 
 ## Connection timeouts or long login times
 {: #connection-timeouts}

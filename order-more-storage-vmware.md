@@ -19,14 +19,19 @@ subcollection: citrix-daas
 {:important: .important}
 {:note: .note}
 {:table: .aria-labeledby="caption"}
+{: deprecated: .deprecated} 
+
 
 # Ordering more NFS storage on your bare metal servers for VMware
 {: #order-storage-bm-vmware}
 
+{{site.data.keyword.cvad_full}} Classic automation is deprecated. As of 12-4-23, you can't create new classic instances with automation. 
+{: deprecated}
+
 When you add or delete a service or infrastructure component, you must wait until the modification is complete before you can add or delete another service or infrastructure component. 
 {: note}
 
-You can add more storage on your {{site.data.keyword.cvad_full}} bare metal servers as a separate mount point for any operational reasons.
+You can add more storage on your bare metal servers as a separate mount point for any operational reasons.
 
 1. Navigate to **Menu icon ![Menu icon](../icons/icon_hamburger.svg) > VMware > Resources**. 
 2. Select your vCenter Instance. 

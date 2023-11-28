@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2020
+  years: 2020, 2021
 lastupdated: "2020-09-01"
 
 keywords:
@@ -19,12 +19,16 @@ subcollection: citrix-daas
 {:important: .important}
 {:note: .note}
 {:table: .aria-labeledby="caption"}
+{: deprecated: .deprecated} 
 
 
 # Ordering more storage on your bare metal servers
 {: #order-extra-storage-vm}
 
-If you need more storage on your {{site.data.keyword.cvad_full}} bare metal servers as a separate mount point for any operational reasons, complete the following steps.
+{{site.data.keyword.cvad_full}} Classic automation is deprecated. As of 12-4-23, you can't create new classic instances with automation. 
+{: deprecated}
+
+If you need more storage on your bare metal servers as a separate mount point for any operational reasons, complete the following steps.
 
 1. Log in to the [{{site.data.keyword.cloud}} console](https://cloud.ibm.com/login){: external} by using your unique credentials.
 2. Navigate to **Menu icon ![Menu icon](../icons/icon_hamburger.svg) > Classic Infrastructure > File Storage**.

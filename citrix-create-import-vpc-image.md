@@ -20,10 +20,14 @@ subcollection: citrix-daas
 {:note: .note}
 {:beta: .beta}
 {:table: .aria-labeledby="caption"}
+{: deprecated: .deprecated} 
 
 
 # Creating and importing a Windows-managed desktop custom image for Citrix-DaaS
 {: #create-import-windows-custom-image-citrix-daas}
+
+{{site.data.keyword.cvad_full}} Classic automation is deprecated. As of 12-4-23, you can't create new classic instances with automation. 
+{: deprecated}
 
 You can create your own custom Windows desktop-based image to import the custom image into {{site.data.keyword.vpc_full}}. You can then use the custom image to deploy a virtual server or bare metal server in the {{site.data.keyword.vpc_full}} infrastructure.
 {: shortdesc}
@@ -86,6 +90,7 @@ Locate and read these documents:
 *  [Sysprep (Generalize) a Windows installation](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/sysprep--generalize--a-windows-installation?view=windows-10)
 *  [Enable and disable the built-in administrator account](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/enable-and-disable-the-built-in-administrator-account?view=windows-10).
 
+
 ### Initial steps for creating a Windows custom image
 {: #create-win-custom-image-first-steps}
 
@@ -102,7 +107,32 @@ Complete the following steps to start creating a Windows custom image.
     {{site.data.keyword.cloud}} supports custom image import with VHD or qcow2. However, Virtual Box does not support the qcow2 format.
     {: note}
 
-3. Use VirtualBox to create a virtual machine with the VHD image that you created in step 2. For more information, see [Oracle VM VirtualBox User Manual](https://www.virtualbox.org/manual/){: external}.
+3. Obtain the required virtio-win drivers by [provisioning](/docs/vpc?topic=vpc-creating-virtual-servers) or accessing an existing Red Hat Enterprise Linux virtual server in {{site.data.keyword.vpc_short}}. Then, install the virtio-win package on the server. Finally, copy the virtio-win ISO file, for example, *virtio-win-1.9.15.iso*, to use for your Windows custom image.
+
+   1. On your Red Hat Enterprise Linux virtual server in {{site.data.keyword.vpc_short}}, install the virtio-win package by running the following command:
+
+      ```sh
+      yum install virtio-win
+      ```
+      {: codeblock}
+
+      In this example, the virtio-win package is being installed on Red Hat Enterprise Linux version 8. Your returned output is similar to the following example:
+
+      ```sh
+      Installed:
+        virtio-win-1.9.15-0.el8.noarch
+      ```
+      {: screen}
+
+   2. Access the virtio-win ISO in the `/usr/share/virtio-win` directory.  
+
+      ```sh
+      cd /usr/share/virtio-win/
+      ```
+      {: codeblock}
+
+
+4. Use VirtualBox to create a virtual machine with the VHD image that you created in step 2. For more information, see [Oracle VM VirtualBox User Manual](https://www.virtualbox.org/manual/){: external}.
 
 If you choose to use a method other than VirtualBox to create the custom image, such as VMware, you must remove all drivers that are specific to that hypervisor from the custom image.
 {: important}

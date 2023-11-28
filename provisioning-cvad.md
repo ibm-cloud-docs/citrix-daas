@@ -19,9 +19,13 @@ subcollection: citrix-daas
 {:important: .important}
 {:note: .note}
 {:table: .aria-labeledby="caption"}
+{: deprecated: .deprecated} 
 
 # Provisioning {{site.data.keyword.cvad_full_notm}} Classic infrastructure
-{: #provisioning-cvad-classic}
+{: #provisioning-citrix-daas-classic}
+
+{{site.data.keyword.cvad_full}} Classic automation is deprecated. As of 12-4-23, you can't create new classic instances with automation. 
+{: deprecated}
 
 ## What is provisioned
 {: #what-is-provisioned-classic}
@@ -29,7 +33,7 @@ subcollection: citrix-daas
 When you provision {{site.data.keyword.cvad_full}}, you receive the following components:
 * Hypervisors - You get to choose the configuration and quantity of bare metal servers during the ordering process.
 * 3 x Cloud Connectors on public virtual server instances with Windows 2019 OS.
-* 1 x Active Directory server on a public virtual server instance with Windows 2016 OS.
+* 1 x Active Directory server on a public virtual server instance with Windows 2019 OS.
 * 1 x DHCP server on a public virtual server instance with CentOS to dynamically allocate IPs to the virtual machines.
 * 1 x proxy server on a public virtual server instance with CentOS to allow access to the internet for both Cloud Connectors and desktops.
 * File Storage with the capacity that you choose during the ordering process.
@@ -46,16 +50,16 @@ If you ordered {{site.data.keyword.cvad_short}} with Citrix Hypervisors, you rec
 If you ordered {{site.data.keyword.cvad_short}} with VMware ESXi Hosts, you receive:
 
 *	VMware ESXi hosts -  You need to choose the configuration and quantity of bare metal servers during the ordering process. The VMware cluster is configured with these ESXi hosts.
-*	Fully configured vCenter server with NSX-V. You can choose to purchase the [licenses](/docs/citrix-daas?topic=citrix-daas-provisioning-cvad#licensing-vmware) either from IBM or use your own license keys.
+*	Fully configured vCenter server with NSX-V. You can choose to purchase the [licenses](https://test.cloud.ibm.com/docs/citrix-daas?topic=cvad-provisioning-citrix-daas#licensing-vmware) either from IBM or use your own license keys.
 *	Fully configured Active Directory server in the VMware cluster configured to enable deployments. No post-provisioning is required for this Active Directory server. This Active Directory server is in addition to the Active Directory servers used by {{site.data.keyword.cvad_full_notm}}. For more information, see [Active Directory Domain Services introduction](https://cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-adds-intro). 
 *	File Storage with the capacity that you choose during the ordering process.
 * vSAN storage based on the capacity of the disks you chose during the ordering process.
 
 
 ## Before you begin
-{: #before-you-begin-provisioning-cvad}
+{: #before-you-begin-provisioning-citrix-daas}
 
-You can provision {{site.data.keyword.cvad_full}} through the {{site.data.keyword.cloud_notm}} catalog and then manage the workloads through the Citrix Cloud management console.
+You can provision {{site.data.keyword.cvad_full_notm}} through the {{site.data.keyword.cloud_notm}} catalog and then manage the workloads through the Citrix Cloud management console.
 {: shortdesc}
 
 Before you begin, review the following prerequisites.
@@ -64,7 +68,7 @@ Before you begin, review the following prerequisites.
 3. You must have a Citrix API client and password pair. Download the client ID and Secret. For more information about creating the key pair, see [Create an API client](https://developer.cloud.com/getting-started){: external}
 4. Log in to the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog){: external} by using your unique credentials. 
 5. Create a [Classic Infrastructure API key](https://cloud.ibm.com/iam/apikeys) in the IAM dashboard before you create an order. Retrieve and verify your credentials before proceeding. 
-6. In the **Compute** section, locate the **Citrix Digital Workspace Solutions** section and select **{{site.data.keyword.cvad_full_notm}}**.
+6. In the **Compute** section, locate the **Citrix Digital Workspace Solutions** section and select **{{site.data.keyword.cvad_short}}**.
 
 To provision {{site.data.keyword.cvad_full_notm}}, you need to enter the following information.
 
@@ -80,9 +84,9 @@ After you provide your Citrix credentials, make sure to select **Validate** to v
 | Citrix API client ID | Enter your Citrix API client ID information. For more information about creating the key pair, see [Create an API client](https://developer.cloud.com/getting-started){: external} from the Citrix Developer site. |
 | Citrix API client secret | Enter your Citrix API client secret key. |
 | Resource location | This Citrix resource location must be in the same geographic location as your selected {{site.data.keyword.cloud_notm}} data center. You can either create a resource location or use an existing one. The **Use existing** resource location option is only available after your account is validated. If you create a resource location, you must follow [Citrix naming restrictions](https://docs.citrix.com/en-us/citrix-cloud/citrix-cloud-resource-locations/resource-locations.html#naming-restrictions){: external}. When you create a resource location, use the [resource location limits](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops-service/limits.html#resource-location-limits){: external}. |
+| Number of Coud Connectors  | The number of Cloud Connectors to create. Can have up to 3 Cloud Connectors.  |
 | Hostname for Cloud Connector | These fields are optional for naming the Cloud Connector virtual machines. You can edit the names or keep the pre-populated defaults. If you edit the names, you must follow [Microsoft naming conventions](https://support.microsoft.com/en-us/help/909264/naming-conventions-in-active-directory-for-computers-domains-sites-and){: external}. |
-{: caption="Table 1. Citrix connectivity details" caption-side="top"}
-
+{: caption="Table 1. Citrix Connectivity details" caption-side="top"}
 
 Select **Validate** to validate your credentials.  You must have valid credentials to create an order.
 
@@ -91,7 +95,7 @@ Select **Validate** to validate your credentials.  You must have valid credentia
 
 | Field     | Details     |
 | --------- | ----------- |
-|Active Directory Topology |How your Active Directory is installed. You have three options:  \n **IBM Cloud**  \n Deploy a new Active Directory controller on {{site.data.keyword.cloud_notm}}.  \n **Extended (Multisite)**  \n You use an existing Active Directory and deploy a Domain Controller on {{site.data.keyword.cloud_notm}}.  \n **Extended (Site-to-Site)**  \n You use your existing Active Directory and Domain Controller installed on-premises for this {{site.data.keyword.cvad_full_notm}} for IBM Cloud application. |
+|Active Directory Topology |How your Active Directory is installed. You have three options:  \n **{{site.data.keyword.cloud_notm}}**  \n Deploy a new Active Directory controller on {{site.data.keyword.cloud_notm}}.  \n **Extended (Multisite)**  \n You use an existing Active Directory and deploy a Domain Controller on {{site.data.keyword.cloud_notm}}.  \n **On-Premises (Site-to-Site)**  \n You use your existing Active Directory and Domain Controller installed on-premises for this {{site.data.keyword.cvad_full_notm}} application. |
 |Cloud Connector and Active Directory domain name | The domain name is applied to both the Cloud Connectors and the Active Directory. You must follow [Microsoft naming conventions](https://support.microsoft.com/en-us/help/909264/naming-conventions-in-active-directory-for-computers-domains-sites-and){: external}. |
 |Active Directory safe mode password |The password must meet the following password complexity requirements:  \n Cannot contain the user's account name or parts of the user's full name that exceed two consecutive characters.  \n  Must be at least 7 characters in length.  \n  Must contain characters from three of the following four categories:  \n - English uppercase characters (A through Z)  /n - English lowercase characters (a through z)  \n - Base 10 digits (0 - 9)  \n - Non-alphabetic characters (for example, !, $, #, %) |
 {: caption="Table 2. Active Directory details" caption-side="top"}
@@ -165,13 +169,13 @@ Licensing applies to VMware configurations only.
 |--------|----------|
 |vCenter Server License - Standard|You can order a Standard vCenter license or provide your own. If you provide your own license, you must enter your license key.|
 |vSphere Server license - Enterprise Plus|You can order an Enterprise Plus vSphere Server license or provide your own. If you provide your own license, you must enter your license key.|
-|VMWare license - NSX|You can order a VMWare NSX license or provide your own. You can order a Base, Advanced, or Enterprise license. If you provide your own license, you must enter your license key.|
+|VMware license - NSX|You can order a VMware NSX license or provide your own. You can order a Base, Advanced, or Enterprise license. If you provide your own license, you must enter your license key.|
 |vSAN license |You can order a vSAN license or provide your own. You can order an Advanced or Enterprise license. If you provide your own license, you must enter your license key.|
-{: caption="Table 8. VMWare Licensing details" caption-side="top"}
+{: caption="Table 8. VMware Licensing details" caption-side="top"}
 
 ## Next steps
 {: #next-steps-provisioning-citrix-daas}
 
 When the components are provisioned, you receive an email with information about the components ordered.
 
-After the {{site.data.keyword.cvad_full_notm}} components are provisioned, you need to complete a few post-provisioning steps to get you up and running. For more information, see [Post-provisioning steps for Citrix Hypervisor](/docs/citrix-daas?topic=citrix-daas-post-provisioning-cvad).
+After the {{site.data.keyword.cvad_full_notm}} components are provisioned, you need to complete a few post-provisioning steps to get you up and running. For more information, see [Post-provisioning steps for Citrix Hypervisor](/docs/citrix-daas?topic=citrix-daas-post-provisioning-citrix-daas).

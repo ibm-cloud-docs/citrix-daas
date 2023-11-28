@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2020
+  years: 2020, 2021
 lastupdated: "2020-07-07"
 
 keywords:
@@ -19,9 +19,13 @@ subcollection: citrix-daas
 {:important: .important}
 {:note: .note}
 {:table: .aria-labeledby="caption"}
+{: deprecated: .deprecated} 
 
 # Modifying network interface speed
 {: #modify-network-interface-speed}
+
+{{site.data.keyword.cvad_full}} Classic automation is deprecated. As of 12-4-23, you can't create new classic instances with automation. 
+{: deprecated}
 
 If you want to modify the network interface speed, complete the following steps.
 

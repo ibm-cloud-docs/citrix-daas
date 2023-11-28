@@ -19,22 +19,32 @@ subcollection: citrix-daas
 {:important: .important}
 {:note: .note}
 {:table: .aria-labeledby="caption"}
+{: deprecated: .deprecated} 
 
 # Configuring monitoring
 {: #configuring-monitoring}
 
+{{site.data.keyword.cvad_full}} Classic automation is deprecated. As of 12-4-23, you can't create new classic instances with automation. 
+{: deprecated}
+
 ## Configuring monitoring for Citrix Hypervisor
 {: #configuring-monitoring-citrix-hypervisor}
 
-### IBM Cloud monitoring services
+### {{site.data.keyword.cloud_notm}} monitoring services
 {: #ibm-cloud-monitoring}
 
+{{site.data.keyword.cvad_full}} Classic is deprecated. As of 12-4-23, you can't create new instances, and access to free instances will be removed.  Any instance that still exists on that date will be deleted. Migrate your information to Citrix Virtual Private Cloud.  
+{: deprecated}
+
 You can configure monitoring with {{site.data.keyword.mon_full}} to keep you aware of any issues with your devices. For more information, see [{{site.data.keyword.cloud_notm}} monitoring services](/docs/cloud-infrastructure?topic=cloud-infrastructure-monitoring).
+{: deprecated}
+
 
 ### Virtual Apps and Desktops monitoring
 {: #virtual-apps-desktops-monitoring}
 
 You can also configure alerts and notifications for your {{site.data.keyword.cvad_short}} service. Log in to your [Virtual Apps and Desktops service](https://xenapp.cloud.com/monitor){: external} to configure monitoring. For more information, see the [Citrix monitoring documentation](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops-service/monitor.html){: external}.
+{: deprecated}
 
 ## Configuring monitoring for VMware ESXi
 {: #configuring-monitoring-vmware-esxi}

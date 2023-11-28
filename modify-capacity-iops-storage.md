@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2020-07-07"
+  years: 2020, 2021
+lastupdated: "2020-07-10"
 
 keywords:
 
@@ -19,10 +19,13 @@ subcollection: citrix-daas
 {:important: .important}
 {:note: .note}
 {:table: .aria-labeledby="caption"}
-
+{: deprecated: .deprecated} 
 
 # Modifying capacity and IOPS of your storage
 {: #modify-capacity-and-IOPS-storage}
+
+{{site.data.keyword.cvad_full}} Classic automation is deprecated. As of 12-4-23, you can't create new classic instances with automation. 
+{: deprecated}
 
 By default, the IOPS tier is 4 IOPS/GB when you provision your bare metal servers. If you want to modify the capacity and IOPS of your storage, complete the following steps.
 

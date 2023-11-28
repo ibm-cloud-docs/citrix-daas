@@ -19,7 +19,7 @@ subcollection: citrix-daas
 {:important: .important}
 {:note: .note}
 {:table: .aria-labeledby="caption"}
-
+{: deprecated: .deprecated} 
 
 # Ordering more bare metal servers
 {: #order-bare-metal-servers}
@@ -27,9 +27,14 @@ subcollection: citrix-daas
 ## Citrix Hypervisor
 {: #order-bm-servers-citrix-hypervisor}
 
-If you want to increase your bare metal server count for {{site.data.keyword.cvad_full}} in your resource location, you can add more servers. Before you order more bare metal servers, make sure you identify your system's [network details](/docs/citrix-daas?topic=citrix-daas-post-provisioning-citrix-daas#view-network-details). You need to make sure to select the same VLAN and primary subnet when you order more servers.
+{{site.data.keyword.cvad_full}} Classic automation is deprecated. As of 12-4-23, you can't create new classic instances with automation. 
+{: deprecated}
+
+If you want to increase your bare metal server count in your resource location, you can add more servers. Before you order more bare metal servers, make sure you identify your system's [network details](/docs/citrix-daas?topic=citrix-daas-post-provisioning-citrix-daas#view-network-details). You need to make sure to select the same VLAN and primary subnet when you order more servers.
+{: deprecated}
 
 You can order more bare metal servers through the [{{site.data.keyword.cloud}} catalog](https://cloud.ibm.com/catalog?category=compute#services){: external}. 
+{: deprecated}
 
 ## VMware ESXi
 {: #order-bm-servers-vmware-esxi}

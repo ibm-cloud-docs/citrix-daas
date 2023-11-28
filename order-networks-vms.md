@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2020
+  years: 2020, 2021
 lastupdated: "2020-09-24"
 
 keywords:
@@ -19,11 +19,15 @@ subcollection: citrix-daas
 {:important: .important}
 {:note: .note}
 {:table: .aria-labeledby="caption"}
+{: deprecated: .deprecated} 
 
 # Ordering more networks for your virtual machines
 {: #order-more-networks-for-vm}
 
-A default secondary subnet with 256 IP address space is provisioned in the same VLAN as the primary subnet when you provision your bare metal servers. If you want to order more portable subnets for your {{site.data.keyword.cvad_full}}, complete the following steps.
+{{site.data.keyword.cvad_full}} Classic automation is deprecated. As of 12-4-23, you can't create new classic instances with automation. 
+{: deprecated}
+
+A default secondary subnet with 256 IP address space is provisioned in the same VLAN as the primary subnet when you provision your bare metal servers. If you want to order more portable subnets, complete the following steps.
 
 1. Log in to the [{{site.data.keyword.cloud}} console](https://cloud.ibm.com/login){: external} by using your unique credentials. 
 2. Navigate to **Menu icon ![Menu icon](../icons/icon_hamburger.svg) > Classic Infrastructure > Device List**.
