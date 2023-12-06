@@ -2,11 +2,11 @@
 
 copyright:
   years:  2022
-lastupdated: "2022-7-19"
+lastupdated: "2022-9-14"
 
-keywords: cvad release notes
+keywords: citrix-daas release notes
 
-subcollection: cvad
+subcollection: citris-daas
 
 content-type: release-note
 
@@ -18,7 +18,7 @@ content-type: release-note
 
 <!-- You must add the release-note content type in your attribute definitions AND to each release note H2. This will ensure that the release note entry is pulled into the notifications library. -->
 
-# Release notes for {{site.data.keyword.cvad_full_notm}}
+# Release notes for {{site.data.keyword.cvad_short}}
 {: #my-service-relnotes}
 
 <!-- The title of your H1 should be Release notes for _service-name_, where _service-name_ is the non-trademarked short version keyref. Include your service name as a search keyword at the top of your Markdown file. See the example keywords above. -->
@@ -26,44 +26,47 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.cvad_full}} that are grouped by Date. Release notes are available for a minimum of three years.
 {: shortdesc}
 
-
-
-<!-- placeholder
-### 29 July 2022
-{: #cvad-jul2922}
+## 06 December 2023
+{: #citrix-daas-dec0623}
 {: release-note}
 
-Log Analysis
-:   Added centralized logging.
+Deprecation of Citrix DaaS automation on Classic
+:  After 06 December 2023, Citrix DaaS automation on Classic is no longer supported, which means that no more bug fixes, technical support, or any new downloads are available. Existing downloaded software will continue to run after 28 November 2023, but it will no longer be supported and is used at your own risk. Citrix DaaS can still be configured manually using the Citrix DaaS catalog tile from the IBM Cloud catalog.
 
--->
+## 15 June 2023
+{: #citrix-daas-jun1523}
+{: release-note}
 
-## 15 September 2022
-{: #cvad-sep1522}
+Pricing calculator
+:   Added a pricing calculator for users to estimate monthly costs per user per month.  
+
+
+## 14 September 2022
+{: #citrix-daas-sep1422}
 {: release-note}
 
 Rebranding
-:   This is the initial release of the rebranded {{site.data.keyword.cvad_full_notm}}, formerly Citrix Virtual Apps and Desktops on IBM Cloud;reg;. 
+:   This is the initial release of the rebranded {{site.data.keyword.cvad_full_notm}}, formerly Citrix Virtual Apps and Desktops on IBM Cloud&reg;.  
 :   If you are using bookmarks to access the documentation, you should update them to the new product name path.
 
 
 ## 25 August 2022
-{: #cvad-aug2522}
+{: #citrix-daas-aug2522}
 {: release-note}
 
-Log Analysis
-:   Added consolidated logging.
+LogAnalysis
+:   Added centralized logging.
 
 
 ## 7 July 2022
-{: #cvad-jul0722}
+{: #citrix-daas-jul0722}
 {: release-note}
 
 Volume worker
 :   Added Volume Worker, which is used for distributed identity disk creation with large machine catalogs.
 
 ## 8 June 2022
-{: #cvad-jun0822}
+{: #citrix-daas-jun0822}
 {: release-note}
 
 Dedicated host
@@ -71,7 +74,7 @@ Dedicated host
 
 
 ## 25 May 2021
-{: #cvad-may2521}
+{: #citrix-daas-apr2621}
 {: release-note}
 
 Virtual private Cloud
@@ -79,21 +82,21 @@ Virtual private Cloud
 
 
 ## 26 July 2021
-{: #cvad-jul2621}
+{: #citrix-daas-apr2621}
 {: release-note}
 
 VMware
 :   Added support for VMware ESXi Hosts.  
 
 ## 26 April 2021
-{: #cvad-apr2621}
+{: #citrix-daas-apr2621}
 {: release-note}
 
 Active Directory
 :   Added Active Directory topologies.  Can now host AD in IBM Cloud, on-premises, or hybrid.
 
-## 25 March 2021
-{: #cvad-mar2521}
+## 25 Mar 2021
+{: #citrix-daas-mar2521}
 {: release-note}
 
 Introducing {{site.data.keyword.cvad_short}}
