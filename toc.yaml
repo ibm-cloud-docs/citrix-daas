@@ -9,7 +9,7 @@ toc:
     console-page: "/classic"
     product-page: "https://www.ibm.com/cloud/citrix-daas"
     path: citrix-daas
-    label: Citrix Daas for IBM Cloud
+    label: Citrix DaaS for IBM Cloud
 
 #  List your getting started tutorial (getting-started.md) as the first item in the Get started nav group. See https://test.cloud.ibm.com/docs/writing?topic=writing-navigation for more details on the toc design.
   entries:
@@ -23,53 +23,18 @@ toc:
       - product-compatibility-guide.md
       - release-notes.md
 
-  - navgroup:
+  - navgroup:  
      id: howto
      topics:
      - topicgroup:
         label: Provisioning steps
         topics:
-          - provisioning-cvad.md
           - provisioning-cvad-vpc.md
-
 
      - topicgroup:
         label: Post-provisioning steps
         topics:
-          - post-provisioning.md
-          - post-provisioning-vmware.md
           - post-provisioning-vpc.md
-
-     - topicgroup:
-        label: Configuring
-        topics: 
-          - configure-high-availability.md
-          - configure-backup.md
-          - configure-monitoring.md
-
-     - topicgroup:
-        label: Using Windows 10 and Windows 11
-        topics:
-          - citrix-create-import-vpc-image.md
-
-     - topicgroup:
-        label: Managing servers
-        topics:
-          - order-bm-servers.md
-          - cancel-bm-servers.md
-
-     - topicgroup:
-        label: Managing networks
-        topics: 
-          - order-networks-vms.md
-          - modify-network-speed.md
-
-     - topicgroup:
-        label: Managing storage
-        topics:
-          - order-more-storage.md
-          - order-more-storage-vmware.md
-          - modify-capacity-iops-storage.md
 
      - topicgroup:
         label: Managing Resources
@@ -81,6 +46,5 @@ toc:
       id: help
       topics:
       - faqs.md
-      - troubleshooting.md
       - troubleshooting-vpc.md
       - getting-help.md

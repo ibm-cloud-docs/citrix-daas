@@ -24,11 +24,6 @@ subcollection: citrix-daas
 # Getting started with {{site.data.keyword.cvad_full_notm}} 
 {: #getting-started-tutorial}
 
-{{site.data.keyword.cvad_full}} Classic automation is deprecated. As of 12-4-23, you can't create new classic instances with automation. 
-{: deprecated}
-
-Citrix Virtual Apps and Desktops on IBM Cloud&reg; is now {{site.data.keyword.cvad_full}}. If you are using bookmarks to access the documentation, you should update them to the new product name path.
-{: note}
 
 Use {{site.data.keyword.cvad_full}} to create a dedicated {{site.data.keyword.cvad_short}} service environment at any of our global data centers. You have the option of creating a VMware solution, or VPC solution.    
 {: shortdesc}
@@ -60,10 +55,6 @@ To order and use {{site.data.keyword.cloud_notm}} services, you need to sign up 
 ## Step 2. Create {{site.data.keyword.cloud_notm}} API keys
 {: #create-api-keys}
 
-For Classic and VMware solutions, you need to add a classic infrastructure API key to your {{site.data.keyword.cloud_notm}} account. For more information about creating or managing API keys, see [Managing classic infrastructure API keys](/docs/account?topic=account-classic_keys).
-{: deprecated}
-
-
 For VPC solutions, you need to add an {{site.data.keyword.cloud_notm}} API key to your {{site.data.keyword.cloud_notm}} account. For more information about creating or managing API keys, see [Managing user API keys](/docs/account?topic=account-userapikey&interface=ui).
 
 ## Step 3. Verify Citrix and operating system entitlements
@@ -88,34 +79,6 @@ To enable VRF, see [Enabling VRF](/docs/account?topic=account-vrf-service-endpoi
 
 ## Step 6. Set up user permissions in IAM 
 {: #set-up-user-permissions}
-
-### Classic
-{: #set-up-user-permissions-classic}
-
-{{site.data.keyword.cvad_full}} Classic is deprecated. As of 12-4-23, you can't create new instances, and access to free instances will be removed.  Any instance that still exists on that date will be deleted. Migrate your information to Citrix Virtual Private Cloud.  
-{: deprecated}
-
-To provision {{site.data.keyword.cvad_full_notm}}, classic infrastructure users need these permissions: 
-{: deprecated}
-
-| Category | Permission |
-| -------- | ---------- |
-| Account | - Add/Upgrade Storage (StorageLayer)  \n - Add Server   \n - Cancel Server   \n - Add/Upgrade Services   \n - Cancel Services   \n - Add/Upgrade Cloud Instances   \n - View Event Log |
-| Devices | Select all |
-| Network | - Add IP addresses   \n - Add Compute with Public Network Port|
-| Services |- View licenses   \n - Storage Manage |
-{: caption="Table 1. Required user permissions to provision Classic and VMwWre" caption-side="top"}
-{: deprecated}
-
-To access and update the classic infrastructure permissions, complete the following steps:{: deprecated}
-
-
-1. In the {{site.data.keyword.cloud_notm}} console, go to **Manage > Access (IAM)** and select **Users**. {: deprecated}
-
-2. Select the user's name that you want to update access for, and click **Classic infrastructure**. {: deprecated}
-
-3. If the user is a _Basic User_, you need to add the permission sets as shown in Table 1. {: deprecated}
-
 
 ### VMware solutions
 {: #set-up-user-permissions-vmware}
@@ -180,9 +143,6 @@ You must create the proper Schematics access policies for a user to be able to u
 {: #getting-started-next-steps}
 
 After you reviewed and completed these prerequisites, you are ready to provision {{site.data.keyword.cvad_full_notm}}. For more information, see:
-
-*  [Provisioning {{site.data.keyword.cvad_full_notm}}](/docs/citrix-daas?topic=citrix-daas-provisioning-citrix-daas-classic) for Classic and VMware solutions
-{: deprecated}
 
 * [Provisioning {{site.data.keyword.cvad_full_notm}} on Virtual Private Cloud](/docs/citrix-daas?topic=citrix-daas-provisioning-citrix-daas-vpc)
 
