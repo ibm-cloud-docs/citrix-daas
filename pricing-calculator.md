@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023
-lastupdated: "2023-06-06"
+  years: 2023, 2024
+lastupdated: "2024-03-22"
 
 keywords:
 
@@ -18,10 +18,14 @@ subcollection: citrix-daas
 {:tip: .tip}
 {:beta: .beta}
 {:important: .important}
+{:deprecated: .deprecated}
 {:table: .aria-labeledby="caption"}
 
 # Using the Pricing calculator to estimate your monthly cost per user per month
 {: #pricing-calculator-monthly-cost}
+
+{{site.data.keyword.cvad_full}} is deprecated. As of 18 April 2024, you can't create new instances, and access to existing instances will be removed. Existing premium plan instances are supported until 18 April 2024. Any instances that still exist on that date will be deleted. 
+{: deprecated}
 
 The pricing information for your system resources is shown on the side of the provisioining window and shows all of your equipment and physical resource costs. To view the cost estimates for your organization on a per user basis, use the pricing calculator. You can get estimates for different configurations before you begin provisioning. The pricing calculator is on the DaaS estimate tab on the main Citrix-DaaS product page. 
 

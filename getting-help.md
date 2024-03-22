@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020
-lastupdated: "2021-04-06"
+  years: 2020, 2024
+lastupdated: "2024-03-22"
 
 subcollection: citrix-daas
 
@@ -12,10 +12,14 @@ subcollection: citrix-daas
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:external: target="_blank" .external}
+{:deprecated: .deprecated}
 {:shortdesc: .shortdesc}
 
 # Getting help and support
 {: #gettinghelp}
+
+{{site.data.keyword.cvad_full}} is deprecated. As of 18 April 2024, you can't create new instances, and access to existing instances will be removed. Existing premium plan instances are supported until 18 April 2024. Any instances that still exist on that date will be deleted. 
+{: deprecated}
 
 If you have problems or questions when using {{site.data.keyword.cvad_full}}, you can contact Citrix support. See [Contact support](https://www.citrix.com/support/open-a-support-case/){: external}.
 

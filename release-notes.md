@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years:  2022
-lastupdated: "2022-9-14"
+  years:  2022, 2024
+lastupdated: "2024-03-22"
 
 keywords: citrix-daas release notes
 
@@ -21,7 +21,8 @@ content-type: release-note
 # Release notes for {{site.data.keyword.cvad_short}}
 {: #my-service-relnotes}
 
-<!-- The title of your H1 should be Release notes for _service-name_, where _service-name_ is the non-trademarked short version keyref. Include your service name as a search keyword at the top of your Markdown file. See the example keywords above. -->
+{{site.data.keyword.cvad_full}} is deprecated. As of 18 April 2024, you can't create new instances, and access to existing instances will be removed. Existing premium plan instances are supported until 18 April 2024. Any instances that still exist on that date will be deleted. 
+{: deprecated}
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.cvad_full}} that are grouped by Date. Release notes are available for a minimum of three years.
 {: shortdesc}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2022
-lastupdated: "2022-08-26"
+  years: 2020, 2024
+lastupdated: "2024-03-22"
 
 keywords:
 
@@ -19,10 +19,13 @@ subcollection: citrix-daas
 {:beta: .beta}
 {:important: .important}
 {:table: .aria-labeledby="caption"}
-{: deprecated: .deprecated} 
+{:deprecated: .deprecated} 
 
 # About {{site.data.keyword.cvad_full_notm}} 
 {: #about-citrix-virtual-apps-and-desktops}
+
+{{site.data.keyword.cvad_full}} is deprecated. As of 18 April 2024, you can't create new instances, and access to existing instances will be removed. Existing premium plan instances are supported until 18 April 2024. Any instances that still exist on that date will be deleted. 
+{: deprecated}
 
 {{site.data.keyword.cvad_full}} is a streamlined process for experienced administrators and service providers to create a dedicated {{site.data.keyword.cvad_short}} service environment at one of our global data centers. This solution provides flexibility, control, and saves you time in building out your virtual apps and desktops solution. If you are invested in virtual desktop infrastructure (VDI), you understand the complexity of hosting and managing VDI entirely on-premises. The offering is purposefully built for a better VDI experience in the cloud.
 

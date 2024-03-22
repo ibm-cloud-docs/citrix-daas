@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2020, 2022
-lastupdated: "2022-11-22"
+  years: 2020, 2024
+lastupdated: "2024-03-22"
 
 keywords:
 
@@ -19,10 +19,14 @@ subcollection: citrix-daas
 {:important: .important}
 {:note: .note}
 {:beta: .beta}
+{:deprecated: .deprecated}
 {:table: .aria-labeledby="caption"}
 
 # Provisioning {{site.data.keyword.cvad_full_notm}} on Virtual Private Cloud
 {: #provisioning-citrix-daas-vpc}
+
+{{site.data.keyword.cvad_full}} is deprecated. As of 18 April 2024, you can't create new instances, and access to existing instances will be removed. Existing premium plan instances are supported until 18 April 2024. Any instances that still exist on that date will be deleted. 
+{: deprecated}
 
 Use this task to provision your {{site.data.keyword.cvad_full}} solution on {{site.data.keyword.IBM}} Virtual Private Cloud. This task corresponds to the provisioning form that you see when you select the **VPC** tile from the {{site.data.keyword.cvad_full_notm}} page. Provisioning uses Schematics to provision your resources. For more information about Schematics, see [Schematics, {{site.data.keyword.cloud_notm}}’s deployment manager](https://cloud.ibm.com/schematics/overview).
 
