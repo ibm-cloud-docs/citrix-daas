@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-03-22"
+lastupdated: "2024-03-26"
 
 keywords:
 
@@ -23,7 +23,7 @@ subcollection: citrix-daas
 
 | Stage | Date | Description |
 | ---------------- | ----------------- | ------------------------------------------------------------ |
-| Deprecation announcement | 18 April 2024  | Announcement of the {{site.data.keyword.cvad_short}} deprecation. Existing instances will continue to run. |
+| Deprecation announcement | 28 March 2024  | Announcement of the {{site.data.keyword.cvad_short}} deprecation. Existing instances will continue to run. |
 | End of marketing | 18 April 2024 | No new instances of {{site.data.keyword.cvad_short}} can be created or purchased. Existing instances will continue to run. |
 | End of support   | 18 April 2024 | You can continue to use any existing instances of {{site.data.keyword.cvad_short}}, but support is no longer available.  |
 | End of life | 30 April 2024   | Running instances of {{site.data.keyword.cvad_short}} are permanently disabled and deprovisioned. |
